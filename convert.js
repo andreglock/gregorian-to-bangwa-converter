@@ -1,7 +1,7 @@
-let startOfCycle = 1618704000; // start of Gregorian-Bangwa cycle (Sunday April 18 - Ankoah)
+let startOfCycle = 12355200; // start of Gregorian-Bangwa cycle (Sunday, May 24, 1970 - Ankoah)
 
 // Check https://www.epochconverter.com/ to find a given time
-let timestamp = 1618704000; // date to convert in UNIX timestamp in seconds
+let timestamp = 1619621853; // date to convert in UNIX timestamp in seconds
 //timestamp = new Date()/1000; // JavaScript function to fetch current date
 
 const convert = (currentTimestamp) => {
