@@ -1,4 +1,6 @@
 let startOfCycle = 1617580800; // start of Gregorian-Bangwa cycle (Monday April 5)
+
+// Check https://www.epochconverter.com/ to find a given time
 let timestamp = 1624456651; // date to convert in UNIX timestamp in seconds
 // timestamp = new Date()/1000; // JavaScript function to fetch current date
 
