@@ -1,8 +1,11 @@
 let startOfCycle = 12355200; // start of Gregorian-Bangwa cycle (Sunday, May 24, 1970 - Ankoah)
 
-// Check https://www.epochconverter.com/ to find a given time
-let timestamp = 1619621853; // date to convert in UNIX timestamp in seconds
-//timestamp = new Date()/1000; // JavaScript function to fetch current date
+let timestamp = new Date(
+    2021 /* year */, 
+    5 /* Month */ - 1, 
+    15, /* Day */ 
+    2) /* 2 hours between UTC and CEST */
+    / 1000; /* JavaScript works with Milliseconds */
 
 const convert = (currentTimestamp) => {
     let UTCString = new Date(timestamp*1000).toUTCString().slice(0, 16); // display given time in string
@@ -32,11 +35,13 @@ const convert = (currentTimestamp) => {
             dayOfWeek = 'Aseih';
             break;
         case 7:
-            dayOfWeek = 'AlungAnzoah';
+            dayOfWeek = 'Alung';
             break;   
+        default:
+            dayOfWeek = 'Error';
     }
 
-    return `Today ${UTCString} is ${dayOfWeek} in the Bangwa week`;
+    return `${UTCString} is ${dayOfWeek} in the Bangwa week`;
 }
 
 console.log(convert(timestamp));
