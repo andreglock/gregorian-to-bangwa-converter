@@ -1,10 +1,10 @@
 let startOfCycle = 12355200; // start of Gregorian-Bangwa cycle (Sunday, May 24, 1970 - Ankoah)
 
 let timestamp = new Date(
-    2021 /* Year */, 
-    5 /* Month */ - 1, 
-    15, /* Day */ 
-    2) /* 2 hours between UTC and CEST */
+    1970 /* Year */, 
+    1 /* Month */ - 1, 
+    3, /* Day */ 
+    1) /* 1 hour between UTC and CET */
     / 1000; /* JavaScript works with Milliseconds */
 
 const convert = (currentTimestamp) => {
@@ -12,6 +12,7 @@ const convert = (currentTimestamp) => {
 
     let dayOfCycle = ((currentTimestamp - startOfCycle) - (currentTimestamp - startOfCycle) % 86400)/ 86400; //86400 is one day
     let dayOfWeek;
+    console.log("day of cycle", dayOfCycle, "timestamp:", currentTimestamp, "difference", currentTimestamp - startOfCycle);
     switch (dayOfCycle % 8) {
         case 0:
             dayOfWeek = 'Ankoah';
@@ -36,8 +37,30 @@ const convert = (currentTimestamp) => {
             break;
         case 7:
             dayOfWeek = 'Alung';
-            break;   
+            break;
+        case -7:
+            dayOfWeek = 'Anzoah';
+            break;
+        case -6:
+            dayOfWeek = 'Alena';
+            break;
+        case -5:
+            dayOfWeek = 'Amina';
+            break;
+        case -4:
+            dayOfWeek = 'Afeah';
+            break;
+        case -3:
+            dayOfWeek = 'Agong';
+            break;
+        case -2:
+            dayOfWeek = 'Aseih';
+            break;
+        case -1:
+            dayOfWeek = 'Alung';
+            break;       
         default:
+            console.log(`${dayOfCycle % 8}`)
             dayOfWeek = 'Error';
     }
 
