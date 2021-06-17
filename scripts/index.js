@@ -35,6 +35,27 @@ const timestamp = button.addEventListener("click", () => {
             break;
         case 7:
             dayOfWeek = 'Alung';
+            break;
+        case -7:
+            dayOfWeek = 'Anzoah';
+            break;
+        case -6:
+            dayOfWeek = 'Alena';
+            break;
+        case -5:
+            dayOfWeek = 'Amina';
+            break;
+        case -4:
+            dayOfWeek = 'Afeah';
+            break;
+        case -3:
+            dayOfWeek = 'Agong';
+            break;
+        case -2:
+            dayOfWeek = 'Aseih';
+            break;
+        case -1:
+            dayOfWeek = 'Alung';
             break;   
         default:
             dayOfWeek = 'Error';
