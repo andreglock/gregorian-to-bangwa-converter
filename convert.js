@@ -1,7 +1,7 @@
 let startOfCycle = 12355200; // start of Gregorian-Bangwa cycle (Sunday, May 24, 1970 - Ankoah)
 
 let timestamp = new Date(
-    2021 /* year */, 
+    2021 /* Year */, 
     5 /* Month */ - 1, 
     15, /* Day */ 
     2) /* 2 hours between UTC and CEST */
